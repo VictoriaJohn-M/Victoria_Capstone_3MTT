@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/general.css" />
+    <link rel="stylesheet" href="CSS/dashboard.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html">TaskMaster</a>
+    </header>
+
+    <main>
+      <h1 class="heading">Welcome to your Dashboard!</h1>
+  
+      <div class="list">
+        <p id="createButton">Create new task</p>
+        <a id="viewButton" href="tasks.html">View tasks</a>
+      </div>
+  
+      <dialog id="dialog">
+        <form method="dialog" onsubmit="createTask(event)" id="form">
+  
+          <section class="input-container">
+            <label for="title">Title</label>
+            <input
+              required
+              type="text"
+              name="title"
+              placeholder="Title"
+              id="title"
+            />
+          </section>
+          <section class="input-container">
+            <label for="description">Description</label>
+            <input
+              required
+              type="description"
+              name="description"
+              placeholder="Description"
+              id="description"
+            />
+          </section>
+          <section class="input-container">
+            <label for="deadline">Deadline</label>
+            <input required type="date" name="deadline" id="deadline" />
+          </section>
+    
+          <section class="input-container">
+            <label for="priority">Priority</label>
+            <select name="priority" id="priority">
+              <option value="">--Please choose an option--</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</options>
+            </select>
+          </section>
+  
+          <div class="button-group">
+            <button autofocus id="closeBtn">Close</button>
+            <button id="" type="submit">Create task</button>
+          </div>
+        </form>
+      </dialog>
+    </main>
+
+    <script src="JS/main.js"></script>
+  </body>
+</html>

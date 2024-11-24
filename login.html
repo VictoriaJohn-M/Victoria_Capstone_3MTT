@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/general.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html">TaskMaster</a>
+    </header>
+
+    <main>
+      <form onsubmit="handleLogin(event)" id="form">
+        <h1>Login</h1>
+
+        <div class="input-group">
+          <section class="input-container">
+            <label for="username">Name</label>
+            <input
+              required
+              type="text"
+              name="username"
+              placeholder="victoria doe"
+              id="username"
+            />
+          </section>
+          <section class="input-container">
+            <label for="email">Email</label>
+            <input
+              required
+              type="email"
+              name="email"
+              placeholder="victoriadoe@gmail.com"
+              id="email"
+            />
+          </section>
+          <section class="input-container">
+            <label for="password">Password</label>
+            <input
+              required
+              type="password"
+              name="password"
+              placeholder="secure123"
+              id="password"
+            />
+          </section>
+        </div>
+        <section class="account">
+          <p>Don't have an account? <a href="./signup.html">Sign up</a></p>
+        </section>
+
+        <button class="btn" type="submit">Login</button>
+      </form>
+
+      <div class="side"></div>
+    </main>
+    <script src="JS/main.js"></script>
+  </body>
+</html>

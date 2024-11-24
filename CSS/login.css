@@ -1,0 +1,88 @@
+body {
+  main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    form {
+      width: 40dvw;
+      padding: 1rem;
+      margin: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+      border: 1px solid gray;
+      box-shadow: 2px 5px 3px 1px gray;
+      border-radius: 10px;
+      background: white;
+
+      h1 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem 0;
+
+        .input-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 0.1rem;
+          font-weight: 500;
+
+          input {
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            border: 1px solid gray;
+          }
+        }
+      }
+
+      & .btn {
+        width: 30%;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        border: 1px solid grey;
+        background: rgb(42, 159, 212);
+        border: none;
+        color: white;
+
+        &:hover {
+          cursor: pointer;
+          background: rgb(73, 161, 202);
+        }
+      }
+    }
+
+    .side {
+      background: rgb(42, 159, 212);
+      width: 60%;
+      height: 100dvh;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    main {
+      form {
+        width: 100%;
+
+        & .btn {
+          width: 100%;
+        }
+      }
+
+      .side {
+        width: 0%;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  background: rgb(218, 218, 218);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2;
+  justify-content: space-between;
+  background: rgb(81, 81, 81);
+  padding: 1rem;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+
+    &:hover {
+      color: rgb(42, 159, 212);
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,185 @@
+body {
+  main {
+    padding: 1rem;
+
+    &:has(dialog[open]) {
+      filter: blur(4px);
+    }
+
+    #search {
+      padding: 0.6rem 1rem;
+      border-radius: 15px;
+      border: 1px solid gray;
+      width: 30%;
+    }
+
+    .backBtn {
+      border: 1px solid gray;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+    }
+
+    #tasksContainer {
+      padding: 1rem 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .task {
+        border: 1px solid black;
+        padding: 1rem;
+        border-radius: 10px;
+        min-width: 250px;
+        width: 30%;
+        margin: 1rem 0;
+        background: white;
+        box-shadow: 2px 5px 3px 1px gray;
+
+        .details {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
+          gap: 0.6rem;
+
+          .hidden {
+            display: none;
+          }
+        }
+
+        .actions {
+          padding: 1rem 0;
+          display: flex;
+          justify-content: space-between;
+
+          p {
+            cursor: pointer;
+
+            &:first-of-type {
+              color: rgb(42, 159, 212);
+
+              &:hover {
+                color: rgb(19, 170, 240);
+              }
+            }
+
+            &:last-of-type {
+              color: rgb(230, 94, 94);
+
+              &:hover {
+                color: rgb(230, 94, 94);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    dialog {
+      border-radius: 10px;
+      border: 1px solid gray;
+      box-shadow: 2px 5px 3px 1px gray;
+      width: 30%;
+      padding: 1rem;
+      justify-self: center;
+      align-self: center;
+
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem;
+
+        .input-container {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          width: 100%;
+
+          label {
+            font-weight: 500;
+          }
+
+          input,
+          select {
+            border-radius: 10px;
+            border: 1px solid gray;
+            padding: 0.5rem 1rem;
+            width: 100%;
+          }
+        }
+
+        .button-group {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 1rem;
+          padding: 1rem 0;
+
+          button {
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            border: 1px solid grey;
+            outline: none;
+            cursor: pointer;
+
+            &:nth-of-type(1) {
+              &:hover {
+                background: rgb(186, 186, 186);
+                color: white;
+              }
+            }
+
+            &:nth-of-type(2) {
+              background: rgb(42, 159, 212);
+              color: white;
+
+              &:hover {
+                background: rgb(12, 119, 169);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    main {
+      #search {
+        width: 100%;
+      }
+
+      #tasksContainer {
+        .task {
+          width: 100%;
+        }
+      }
+
+      dialog {
+        width: 100%;
+
+        form {
+          width: 100%;
+          padding: 1rem;
+
+          .input-container {
+            width: 100%;
+          }
+
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
